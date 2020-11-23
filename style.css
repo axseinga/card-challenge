@@ -17,18 +17,39 @@ html {
     color: hsl(229, 23%, 23%);
 }
 
+.wrap {
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 80%;
+}
+
+.bg--top {
+    top: -180%;
+    left: -10%;
+}
+
+.bg--bottom {
+    top: 40%;
+    left: 50%;
+}
+
 .card {
     background-color: #fff;
+    font-size: 1.8rem;
     width: 350px;
     height: 370px;
-    margin: 20px auto;
+    margin: 10% auto 2% auto;
     border-radius: 5%;
     position: relative; 
 
     overflow: hidden;
     
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .card__bg {
@@ -41,6 +62,72 @@ html {
     border-radius: 50%;
     border: 5px solid #fff;
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 35%;
+}
+
+.card__profile {
+    padding: 10% 0 5% 0;
+    line-height: 1.5;
+    
+    display: grid;
+    justify-items: center;
+}
+
+.card__profile--name {
+    font-weight: 700;
+    letter-spacing: 0.07rem;
+}
+
+.card__profile--age {
+    margin-left: 5px;
+    font-weight: 400;
+    color: hsl(0, 0%, 59%);
+}
+
+.card__profile--city {
+    font-size: 1.4rem;
+    color: hsl(0, 0%, 59%);
+}
+
+.card__division {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card__rates {
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card__rates--box {
+    height: 100%;
+    width: 100%;
+    padding: 30% 30% 20% 30%;
+    align-self: baseline;
+
+    display: grid;
+    justify-content: center;
+    row-gap: 20%;
+}
+
+.card__rates--stats {
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+}
+
+.card__rates--kind {
+    font-size: 1rem;
+    text-align: center;
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 2px;
+    align-self: center;
 }
